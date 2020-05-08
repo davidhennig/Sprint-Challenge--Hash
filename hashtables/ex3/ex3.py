@@ -4,6 +4,17 @@ def intersection(arrays):
     YOUR CODE HERE
     """
 
+    result = []
+    dic = {}
+    for i in arrays:
+        for j in i:
+            if j not in dic:
+                dic[j] = 1
+            else:
+                dic[j] += 1
+            if dic[j] > 1 and j not in result:
+                result.append(j)
+
     return result
 
 
